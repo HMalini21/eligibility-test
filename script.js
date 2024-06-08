@@ -4,25 +4,37 @@ let clearBtn = document.querySelector('#clearBtn');
 let age = document.querySelector('#age');
 let ansState = document.querySelector('#statement');
 
-let h1 = document.createElement('h1');
-h1.innerText = 'Eligibility Test';
-app.appendChild(h1);
+function heading() {
+  let h1 = document.createElement('h1');
+  h1.innerText = 'Eligibility Test';
+  app.appendChild(h1);
+}
 
-checkBtn.addEventListener('click', function () {
-  let userAge = age.value;
-  if (!userAge) {
-    ansState.innerText = 'Enter a input';
+function printResult(text) {
+  ansState.innerHTML = '<h3>' + text + '</h3>';
+}
+
+function checkAge(age) {
+  if (!age) {
+    printResult('Enter a value');
     ansState.style.color = 'grey';
-  } else if (userAge >= 18 && userAge <= 100) {
-    ansState.innerText = 'You are Eligible ';
+  } else if (age >= 18 && age <= 100) {
+    printResult('You are Eligible');
     ansState.style.color = 'green';
   } else {
-    ansState.innerText = 'you NOT are eligible';
+    printResult('you NOT are eligible');
     ansState.style.color = 'red';
   }
+}
+checkBtn.addEventListener('click', function () {
+  let userAge = age.value;
+  checkAge(userAge);
 });
 
 clearBtn.addEventListener('click', function () {
   age.value = '';
-  ansState.innerText = '';
+  printResult('');
+  //   ansState.innerText = '';
 });
+
+heading();
