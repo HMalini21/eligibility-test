@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  margin-top: 151px;
+  background-color: rgb(202, 220, 135);
+  color: black;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(63, 57, 118);
+  font-size: 68px;
+  padding-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+  outline: none;
+  padding: 7px;
+  box-shadow: inset;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+label {
+  text-decoration: underline;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.clickbttn {
+  margin-top: 20px;
+  margin-left: 125px;
+}
+button {
+  padding: 5px;
+  width: 100px;
+  border: none;
+  border-radius: 15px;
+  border-style: groove;
+  background-color: lightblue;
+}
+#statement {
+  margin-top: 20px;
+  margin-left: 120px;
+  font-family: monospace;
+  color: darkslategray;
+  font-size: 20px;
+}
